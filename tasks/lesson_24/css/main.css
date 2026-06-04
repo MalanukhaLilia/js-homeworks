@@ -1,5 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -18,7 +27,7 @@ a {
 .body__layout {
   background-color: #1e1e24;
   color: #ffffff;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   line-height: 1.6;
   padding: 0 0 40px 0;
 }
@@ -72,11 +81,9 @@ a {
   gap: 8px;
   text-decoration: none;
 }
-
 .btn:hover {
   background-color: rgba(112, 215, 231, 0.1);
 }
-
 .btn__back {
   display: inline-block;
   margin-top: 60px;
@@ -87,7 +94,6 @@ a {
   text-decoration: underline;
   text-underline-offset: 4px;
 }
-
 .btn__back:hover {
   color: #ffffff;
 }
@@ -95,12 +101,10 @@ a {
 .info {
   margin-bottom: 50px;
 }
-
 .info__list {
   padding-left: 20px;
   list-style-type: square;
 }
-
 .info__item {
   margin-bottom: 10px;
   color: #dbdbe7;
@@ -116,7 +120,6 @@ a {
   margin-bottom: 30px;
   margin-top: 15px;
 }
-
 .connection__text {
   color: #dbdbe7;
   font-size: 14px;
@@ -133,13 +136,11 @@ a {
 .conventions {
   margin-top: 15px;
 }
-
 .conventions__item {
   margin-bottom: 12px;
   font-size: 15px;
   color: #dbdbe7;
 }
-
 .conventions__name {
   display: inline-block;
   width: 280px;
@@ -149,12 +150,10 @@ a {
 .homework-list {
   margin-top: 20px;
 }
-
 .homework-list__item {
   margin-bottom: 15px;
   font-size: 18px;
 }
-
 .homework-list__link {
   color: #ffffff;
   font-weight: 500;
@@ -163,18 +162,6 @@ a {
   text-decoration: underline;
   text-underline-offset: 5px;
 }
-
 .homework-list__link:hover {
   color: #70d7e7;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+}/*# sourceMappingURL=main.css.map */
