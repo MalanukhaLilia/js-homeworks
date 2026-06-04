@@ -1,0 +1,94 @@
+@use 'vars' as v;
+@use 'fonts';
+@use 'mixins' as m;
+@use 'extends';
+@use 'keyframes';
+@use 'reset';
+
+.body__layout {
+    background-color: v.$bg-color;
+    color: v.$text-color;
+    font-family: fonts.$font-family;
+    line-height: 1.6;
+    padding: 0 0 40px 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 20px;
+    animation: fadeIn 0.5s ease;
+}
+
+.title_1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    color: v.$text-color;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 15px;
+}
+
+.title_2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: v.$accent-color;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.title_3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: v.$text-color;
+}
+
+.btn {
+    background-color: transparent;
+    border: 1px solid v.$accent-color;
+    color: v.$accent-color;
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    
+    &:hover {
+        background-color: rgba(112, 215, 231, 0.1);
+    }
+
+    &__back {
+        display: inline-block;
+        margin-top: 60px;
+        margin-bottom: 20px;
+        color: v.$text-secondary;
+        font-weight: 500;
+        font-size: 14px;
+        text-decoration: underline;
+        text-underline-offset: 4px;
+        
+        &:hover {
+            color: v.$text-color;
+        }
+    }
+}
+
+.section {
+    margin-bottom: 50px;
+}
+
+.task {
+    border-left: 2px solid v.$accent-color;
+    padding-left: 20px;
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
