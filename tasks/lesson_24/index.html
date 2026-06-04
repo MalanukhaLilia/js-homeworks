@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24. JavaScript Basics</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body class="body__layout">
+    <div class="container">
+        <a href="../../index.html" class="btn__back">Back to home</a>
+        
+        <h1 class="title_1">24. JavaScript Basics</h1>
+
+        <section class="info">
+            <h2 class="title_2">All possible use cases for JS:</h2>
+            <ul class="info__list">
+                <li class="info__item">Data storage and auto-saving</li>
+                <li class="info__item">Responding to user actions (e.g., clicks and text input)</li>
+                <li class="info__item">Validation</li>
+                <li class="info__item">Requesting permission to use the microphone, camera, or geolocation...</li>
+                <li class="info__item">Creating menus (like a burger menu) more conveniently than with pure CSS</li>
+                <li class="info__item">Calculators and timers</li>
+                <li class="info__item">Filtering items</li>
+                <li class="info__item">Integrations (e.g., Google Maps)</li>
+                <li class="info__item">Lazy loading/infinite scroll for items</li>
+                <li class="info__item">Regular expressions (Regex)</li>
+                <li class="info__item">Drag-and-drop file uploads</li>
+                <li class="info__item">Pop-up tooltips triggered by user actions</li>
+                <li class="info__item">Image processing (e.g., image compression)</li>
+                <li class="info__item">Hotkeys / keyboard shortcuts</li>
+                <li class="info__item">3D visualization of models</li>
+                <li class="info__item">Changing the page language</li>
+                <li class="info__item">Dark mode</li>
+            </ul>
+        </section>
+
+        <section class="info">
+            <h2 class="title_2">Connecting JS to HTML:</h2>
+            <div class="connection">
+                <h3 class="title_3">Inline connection</h3>
+                <button class="btn" onclick="alert('Inline connection works!')">Inline JS Button</button>
+            </div>
+            <div class="connection">
+                <h3 class="title_3">Internal connection</h3>
+                <p class="connection__text">Using script tag inside HTML file.</p>
+            </div>
+            <div class="connection">
+                <h3 class="title_3">External connection</h3>
+                <p class="connection__text">Using script tag with src attribute pointing to js-basics.js file.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="title_2">Interactive Tasks</h2>
+            <div class="task">
+                <h3 class="title_3">Task 1: Greeting</h3>
+                <button class="btn" onclick="runGreeting()">Run Greeting</button>
+            </div>
+            <div class="task">
+                <h3 class="title_3">Task 2: Age Calculator</h3>
+                <button class="btn" onclick="runAgeCalculator()">Calculate Age</button>
+            </div>
+            <div class="task">
+                <h3 class="title_3">Task 3: Square Perimeter</h3>
+                <button class="btn" onclick="runSquarePerimeter()">Calculate Perimeter</button>
+            </div>
+            <div class="task">
+                <h3 class="title_3">Task 4: Circle Area</h3>
+                <button class="btn" onclick="runCircleArea()">Calculate Area</button>
+            </div>
+        </section>
+
+        <section class="info">
+            <h2 class="title_2">Variable Naming Conventions</h2>
+            <ul class="conventions">
+                <li class="conventions__item"><strong class="conventions__name">camelCase</strong> - camelCaseName</li>
+                <li class="conventions__item"><strong class="conventions__name">snake_case</strong> - snake_case_name</li>
+                <li class="conventions__item"><strong class="conventions__name">PascalCase</strong> - PascalCaseName</li>
+                <li class="conventions__item"><strong class="conventions__name">kebab-case</strong> - kebab-case-name</li>
+                <li class="conventions__item"><strong class="conventions__name">UPPERCASE_SNAKE_CASE</strong> - UPPERCASE_SNAKE_CASE_NAME</li>
+            </ul>
+        </section>
+    </div>
+
+    <script>
+        console.log('Internal script works');
+    </script>
+    <script src="./js/js-basics.js"></script>
+</body>
+</html>
