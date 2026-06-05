@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>33. Asynchronous JavaScript and XML (AJAX)</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body class="body__layout">
+    <div class="container">
+        <div class="header-bar">
+            <a href="../../index.html" class="btn__back">Back to home</a>
+        </div>
+        <h1 class="title_1">33. Asynchronous JavaScript and XML (AJAX)</h1>
+        <div class="movie-search">
+            <div class="movie-search__card">
+                <form id="search-form" class="movie-search__form">
+                    <div class="movie-search__field">
+                        <label for="title-input" class="movie-search__label">Movie Title</label>
+                        <input type="text" id="title-input" class="movie-search__input" placeholder="e.g. Star Wars"
+                            required>
+                    </div>
+                    <div class="movie-search__field">
+                        <label for="type-select" class="movie-search__label">Type</label>
+                        <select id="type-select" class="movie-search__select">
+                            <option value="movie">Movie</option>
+                            <option value="series">Series</option>
+                            <option value="episode">Episode</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="movie-search__btn">Search</button>
+                </form>
+            </div>
+            <div id="results-section" class="movie-results">
+                <h2 class="movie-results__title">Search Results</h2>
+                <div id="movie-grid" class="movie-results__grid"></div>
+                <div id="pagination" class="movie-results__pagination"></div>
+            </div>
+            <div id="message-container" class="movie-message"></div>
+            <div id="details-section" class="movie-details"></div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
