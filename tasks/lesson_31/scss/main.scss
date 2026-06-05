@@ -1,0 +1,224 @@
+@use 'vars' as v;
+@use 'fonts';
+@use 'mixins' as m;
+@use 'extends';
+@use 'keyframes';
+@use 'reset';
+
+.body__layout {
+    background-color: v.$bg-color;
+    color: v.$text-color;
+    font-family: fonts.$font-family;
+    line-height: 1.6;
+    padding: 0 0 40px 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.title {
+    &_1 {
+        font-size: 32px;
+        font-weight: 700;
+        margin-top: 60px;
+        margin-bottom: 40px;
+        color: v.$text-color;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-bottom: 15px;
+    }
+
+    &_2 {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 20px;
+        color: v.$accent-color;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    &_3 {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 12px;
+        color: v.$text-color;
+    }
+}
+
+.btn {
+    background-color: transparent;
+    border: 1px solid v.$accent-color;
+    color: v.$accent-color;
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+
+    &:hover {
+        background-color: rgba(112, 215, 231, 0.1);
+    }
+
+    &__back {
+        display: inline-block;
+        margin-top: 60px;
+        margin-bottom: 20px;
+        color: v.$text-secondary;
+        font-weight: 500;
+        font-size: 14px;
+        text-decoration: underline;
+        text-underline-offset: 4px;
+
+        &:hover {
+            color: v.$text-color;
+        }
+    }
+}
+
+.section {
+    margin-bottom: 50px;
+}
+
+.task {
+    border-left: 2px solid v.$accent-color;
+    padding-left: 20px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+.editor {
+    &__container {
+        margin-top: 15px;
+    }
+
+    &__hint {
+        font-size: 12px;
+        color: v.$text-secondary;
+        margin-bottom: 10px;
+    }
+
+    &__key {
+        font-family: monospace;
+        font-size: 11px;
+        color: v.$accent-color;
+        font-weight: bold;
+    }
+
+    &__view, &__textarea {
+        width: 100%;
+        min-height: 150px;
+        padding: 12px;
+        background-color: v.$card-bg;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        color: v.$text-color;
+        font-family: inherit;
+        font-size: 15px;
+        line-height: 1.6;
+        outline: none;
+    }
+
+    &__textarea {
+        display: block;
+        resize: none;
+    }
+
+    &__view {
+        white-space: pre-wrap;
+        cursor: default;
+    }
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    text-align: left;
+    background-color: v.$card-bg;
+    
+    &__container {
+        margin-top: 15px;
+        overflow-x: auto;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    
+    &__header, &__cell {
+        padding: 12px 16px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    &__header {
+        background-color: rgba(0, 0, 0, 0.2);
+        color: v.$accent-color;
+        font-weight: 600;
+        cursor: pointer;
+        user-select: none;
+        
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+        
+        &--asc::after {
+            content: " ▲";
+            color: v.$accent-color;
+        }
+        
+        &--desc::after {
+            content: " ▼";
+            color: v.$accent-color;
+        }
+    }
+    
+    &__row {
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.03);
+        }
+    }
+}
+
+.resizable {
+    position: relative;
+    width: 300px;
+    height: 180px;
+    min-width: 150px;
+    min-height: 100px;
+    max-width: 100%;
+    padding: 15px;
+    background-color: v.$card-bg;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: v.$text-color;
+    font-size: 14px;
+    line-height: 1.5;
+    overflow: hidden;
+    
+    &__container {
+        margin-top: 15px;
+    }
+    
+    &__text {
+        height: 100%;
+        overflow-y: auto;
+        user-select: text;
+    }
+    
+    &__handle {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 12px;
+        height: 12px;
+        cursor: se-resize;
+        background-color: v.$accent-color;
+        opacity: 0.6;
+        
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
