@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>32. jQuery and slider plugins</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body class="body__layout">
+    <div class="container">
+        <a href="../../index.html" class="btn__back">Back to home</a>
+        <h1 class="title_1">32. jQuery and slider plugins</h1>
+        <div class="game-showcase">
+            <div class="game-card">
+                <header class="game-card__header">
+                    <nav class="game-card__tabs">
+                        <div class="game-card__tab game-card__tab--active" data-tab="info">
+                            <img src="./assets/img/info_icon.svg" alt="Info Icon" class="game-card__tab-icon">
+                            <span class="game-card__tab-text">Information</span>
+                        </div>
+                        <div class="game-card__tab" data-tab="ratings">
+                            <img src="./assets/img/spades_icon.svg" alt="Spade Icon" class="game-card__tab-icon">
+                            <span class="game-card__tab-text">Ratings Info</span>
+                        </div>
+                        <div class="game-card__tab" data-tab="buy">
+                            <img src="./assets/img/bag_icon.svg" alt="Bag Icon" class="game-card__tab-icon">
+                            <span class="game-card__tab-text">Where to Buy</span>
+                        </div>
+                    </nav>
+                </header>
+                <div class="game-card__body">
+                    <div id="info" class="game-card__content game-card__content--active info-tab">
+                        <div class="info-tab__left">
+                            <div class="info-tab__slider-container">
+                                <div class="info-tab__slider">
+                                    <div class="info-tab__slide">
+                                        <img src="./assets/img/farcry6_poster.svg" alt="FarCry 6 Poster">
+                                    </div>
+                                    <div class="info-tab__slide">
+                                        <img src="./assets/img/farcry6_gameplay_1.webp" alt="FarCry 6 Gameplay 1">
+                                    </div>
+                                    <div class="info-tab__slide">
+                                        <img src="./assets/img/farcry6_gameplay_2.webp" alt="FarCry 6 Gameplay 2">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info-tab__stars">
+                                <img src="./assets/img/star_active.svg" alt="Active Star" class="info-tab__star">
+                                <img src="./assets/img/star_active.svg" alt="Active Star" class="info-tab__star">
+                                <img src="./assets/img/star_active.svg" alt="Active Star" class="info-tab__star">
+                                <img src="./assets/img/star_active.svg" alt="Active Star" class="info-tab__star">
+                                <img src="./assets/img/star_inactive.svg" alt="Inactive Star" class="info-tab__star">
+                            </div>
+                        </div>
+                        <div class="info-tab__right">
+                            <div class="info-tab__meta">
+                                <div class="info-tab__title-area">
+                                    <h2 class="info-tab__title">FarCry 6</h2>
+                                    <span class="info-tab__release">First Released Oct 6, 2021</span>
+                                </div>
+                                <div class="info-tab__score">
+                                    <svg viewBox="0 0 64 64" class="info-tab__score-svg">
+                                        <circle cx="32" cy="32" r="28" class="info-tab__score-track"></circle>
+                                        <circle cx="32" cy="32" r="28" class="info-tab__score-bar"></circle>
+                                        <text x="32" y="37" text-anchor="middle" class="info-tab__score-text">8.7</text>
+                                    </svg>
+                                </div>
+                            </div>
+                            <p class="info-tab__description">
+                                Far Cry 6 is a 2021 action-adventure first-person shooter game developed by Ubisoft
+                                Toronto. It is the sixth main installment in the Far Cry series and the successor Far
+                                Cry 5.
+                            </p>
+                            <div class="info-tab__purchase">
+                                <div class="info-tab__price-info">
+                                    <span class="info-tab__discount">20% OFF!</span>
+                                    <span class="info-tab__price">$59.96</span>
+                                </div>
+                                <button class="info-tab__buy-btn">BUY IT NOW</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
