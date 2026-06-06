@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>34. Web Storage</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body class="body__layout">
+    <div class="container">
+        <div class="header-bar">
+            <a href="../../index.html" class="btn__back">Back to home</a>
+        </div>
+        <h1 class="title_1">34. Web Storage</h1>
+        <div class="weather">
+            <div class="weather__search-card">
+                <form id="search-form" class="weather__search-form">
+                    <div class="weather__search-field">
+                        <label for="city-input" class="weather__search-label">City Name</label>
+                        <input type="text" id="city-input" class="weather__search-input" placeholder="e.g. Kyiv"
+                            required>
+                    </div>
+                    <button type="submit" class="weather__search-btn">Get Weather</button>
+                </form>
+            </div>
+            <div id="weather-info" class="weather__info">
+                <div id="cached-banner" class="weather__status">
+                    <span class="weather__status-icon"></span>
+                    <span id="cache-time-text"></span>
+                </div>
+                <div class="weather__row">
+                    <div id="current-section" class="weather__current">
+                        <div class="weather__current-icon">
+                            <img id="current-icon" class="weather__current-img" src="" alt="Weather Condition">
+                        </div>
+                        <div class="weather__current-info">
+                            <span id="current-city" class="weather__current-city"></span>
+                            <span id="current-temp" class="weather__current-temp"></span>
+                            <span id="current-desc" class="weather__current-desc"></span>
+                        </div>
+                    </div>
+                    <div class="weather__details">
+                        <div class="weather__details-item">
+                            <span class="weather__details-label">Feels Like</span>
+                            <span id="feels-like" class="weather__details-value"></span>
+                        </div>
+                        <div class="weather__details-item">
+                            <span class="weather__details-label">Humidity</span>
+                            <span id="humidity" class="weather__details-value"></span>
+                        </div>
+                        <div class="weather__details-item">
+                            <span class="weather__details-label">Wind Speed</span>
+                            <span id="wind-speed" class="weather__details-value"></span>
+                        </div>
+                        <div class="weather__details-item">
+                            <span class="weather__details-label">Pressure</span>
+                            <span id="pressure" class="weather__details-value"></span>
+                        </div>
+                    </div>
+                </div>
+                <div id="hourly-section" class="weather__hourly">
+                    <h2 class="weather__title">24-Hour Forecast</h2>
+                    <div id="hourly-timeline" class="weather__timeline"></div>
+                </div>
+                <div id="forecast-section" class="weather__forecast">
+                    <h2 class="weather__title">5-Day Forecast</h2>
+                    <div id="forecast-grid" class="weather__forecast-grid"></div>
+                </div>
+            </div>
+            <div id="message-container" class="weather__message">
+                <div id="error-message" class="weather__error"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
