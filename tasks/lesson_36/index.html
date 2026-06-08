@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>36. Classes</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body class="body__layout">
+    <div class="container">
+        <div class="header-bar">
+            <a href="../../index.html" class="btn__back">Back to home</a>
+        </div>
+        <h1 class="title_1">36. Classes</h1>
+
+        <div class="classes">
+            <h2 class="classes__title">Task 1: Circle properties</h2>
+            <div class="classes__row">
+                <div class="classes__card">
+                    <div class="classes__input-group">
+                        <label for="circle-radius" class="classes__label">Radius</label>
+                        <input type="number" id="circle-radius" class="classes__input" value="50" min="1" max="150"
+                            required>
+                    </div>
+                    <div class="classes__stats">
+                        <div class="classes__stat-item">
+                            <span class="classes__stat-label">Diameter:</span>
+                            <span id="circle-diameter" class="classes__stat-value">-</span>
+                        </div>
+                        <div class="classes__stat-item">
+                            <span class="classes__stat-label">Area:</span>
+                            <span id="circle-area" class="classes__stat-value">-</span>
+                        </div>
+                        <div class="classes__stat-item">
+                            <span class="classes__stat-label">Circumference:</span>
+                            <span id="circle-circumference" class="classes__stat-value">-</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="classes__card classes__card--center">
+                    <div class="classes__circle-box">
+                        <div id="circle-visual" class="classes__circle-preview"></div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="classes__title">Task 2: Stationery marker</h2>
+            <div class="classes__row">
+                <div class="classes__card">
+                    <div class="classes__input-group">
+                        <label for="marker-color" class="classes__label">Marker color</label>
+                        <select id="marker-color" class="classes__select">
+                            <option value="#ff1744">Red</option>
+                            <option value="#2979ff" selected>Blue</option>
+                            <option value="#00e676">Green</option>
+                            <option value="#ffd600">Yellow</option>
+                            <option value="#e040fb">Purple</option>
+                        </select>
+                    </div>
+                    <div class="classes__input-group">
+                        <label for="marker-text" class="classes__label">Text to print</label>
+                        <input type="text" id="marker-text" class="classes__input" placeholder="Enter text to draw..."
+                            value="Hello World!">
+                    </div>
+                    <div class="classes__btn-row">
+                        <button id="btn-print" class="classes__btn">Print text</button>
+                        <button id="btn-refill" class="classes__btn classes__btn--secondary">Refill ink</button>
+                    </div>
+                </div>
+                <div class="classes__card">
+                    <div class="classes__ink-group">
+                        <span class="classes__label">Ink level</span>
+                        <div class="classes__ink-wrap">
+                            <div id="ink-bar" class="classes__ink-bar" style="width: 100%;"></div>
+                            <span id="ink-percent" class="classes__ink-text">100%</span>
+                        </div>
+                    </div>
+                    <div id="marker-paper" class="classes__marker-paper"></div>
+                </div>
+            </div>
+
+            <h2 class="classes__title">Task 3: Bank employee directory</h2>
+            <div class="classes__row classes__row--column">
+                <div class="classes__card">
+                    <form id="employee-form" class="classes__employee-form">
+                        <div class="classes__input-grid">
+                            <div class="classes__input-group">
+                                <label for="emp-name" class="classes__label">Name</label>
+                                <input type="text" id="emp-name" class="classes__input" placeholder="e.g. John Doe"
+                                    required>
+                            </div>
+                            <div class="classes__input-group">
+                                <label for="emp-position" class="classes__label">Position</label>
+                                <input type="text" id="emp-position" class="classes__input" placeholder="e.g. Teller"
+                                    required>
+                            </div>
+                            <div class="classes__input-group">
+                                <label for="emp-dept" class="classes__label">Department</label>
+                                <input type="text" id="emp-dept" class="classes__input" placeholder="e.g. Sales"
+                                    required>
+                            </div>
+                            <div class="classes__input-group">
+                                <label for="emp-salary" class="classes__label">Salary ($)</label>
+                                <input type="number" id="emp-salary" class="classes__input" placeholder="e.g. 4500"
+                                    required>
+                            </div>
+                        </div>
+                        <button type="submit" class="classes__btn classes__btn--full">Add employee</button>
+                    </form>
+                </div>
+                <div class="classes__card classes__card--table">
+                    <div id="employee-table-container" class="classes__table-container"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
