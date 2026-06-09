@@ -64,7 +64,6 @@ input {
   margin-top: 20px;
   margin-bottom: 40px;
   color: #f5f6fa;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding-bottom: 15px;
 }
 
@@ -73,7 +72,6 @@ input {
   flex-direction: column;
   gap: 30px;
 }
-
 .classes__title {
   font-size: 16px;
   text-transform: uppercase;
@@ -84,7 +82,6 @@ input {
   margin-top: 10px;
   margin-bottom: 20px;
 }
-
 .classes__row {
   display: flex;
   gap: 30px;
@@ -92,7 +89,6 @@ input {
 .classes__row--column {
   flex-direction: column;
 }
-
 .classes__card {
   background-color: #151821;
   border: 1px solid rgba(255, 255, 255, 0.05);
@@ -106,31 +102,34 @@ input {
   flex-direction: column;
   gap: 20px;
 }
-.classes__card--center {
-  justify-content: center;
-  align-items: center;
-  min-height: 300px;
-}
 .classes__card--table {
   padding: 0;
   overflow: hidden;
 }
-
+.classes__card-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: #f5f6fa;
+}
+.classes__panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 30px;
+  background-color: rgba(255, 255, 255, 0.01);
+}
 .classes__input-group {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-
 .classes__label {
   font-size: 12px;
   color: #8f92a1;
   text-transform: uppercase;
   letter-spacing: 0.8px;
 }
-
-.classes__input,
-.classes__select {
+.classes__input, .classes__select {
   background-color: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 4px;
@@ -141,63 +140,14 @@ input {
   width: 100%;
   transition: border-color 0.3s, background-color 0.3s;
 }
-.classes__input:focus,
-.classes__select:focus {
+.classes__input:focus, .classes__select:focus {
   border-color: #00b0ff;
   background-color: rgba(255, 255, 255, 0.07);
 }
-
 .classes__select option {
   background-color: #151821;
   color: #f5f6fa;
 }
-
-.classes__stats {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-top: 10px;
-}
-
-.classes__stat-item {
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  padding-bottom: 8px;
-}
-
-.classes__stat-label {
-  color: #8f92a1;
-  font-size: 14px;
-}
-
-.classes__stat-value {
-  color: #ffffff;
-  font-weight: 700;
-  font-size: 14px;
-}
-
-.classes__circle-box {
-  width: 280px;
-  height: 280px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.classes__circle-preview {
-  border-radius: 50%;
-  border: 2px solid #00b0ff;
-  background-color: #00b0ff;
-  transition: width 0.3s ease, height 0.3s ease;
-}
-
-.classes__btn-row {
-  display: flex;
-  gap: 15px;
-  margin-top: 10px;
-}
-
 .classes__btn {
   background-color: #00b0ff;
   color: #ffffff;
@@ -209,12 +159,13 @@ input {
   letter-spacing: 0.8px;
   cursor: pointer;
   height: 47px;
-  flex: 1;
-  transition: background-color 0.3s, transform 0.1s ease, box-shadow 0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s, transform 0.1s ease;
 }
 .classes__btn:hover {
   background-color: #0091ea;
-  box-shadow: 0 0 15px rgba(0, 176, 255, 0.4);
 }
 .classes__btn:active {
   transform: scale(0.97);
@@ -226,92 +177,59 @@ input {
 }
 .classes__btn--secondary:hover {
   background-color: rgba(255, 255, 255, 0.1);
-  box-shadow: none;
+}
+.classes__btn--danger {
+  background-color: #ff1744;
+  color: #ffffff;
+}
+.classes__btn--danger:hover {
+  background-color: #d50000;
+}
+.classes__btn--small {
+  height: 34px;
+  padding: 6px 10px;
+  font-size: 11px;
+  letter-spacing: 0.4px;
 }
 .classes__btn--full {
   width: 100%;
 }
-
-.classes__ink-group {
+.classes__btn-row {
   display: flex;
-  flex-direction: column;
-  gap: 8px;
+  gap: 12px;
+  margin-top: 10px;
+  flex-wrap: wrap;
 }
-
-.classes__ink-wrap {
-  height: 20px;
-  background-color: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 4px;
-  position: relative;
-  overflow: hidden;
+.classes__btn-row .classes__btn {
+  flex: 1;
+  min-width: 90px;
+  white-space: nowrap;
 }
-
-.classes__ink-bar {
-  height: 100%;
-  background-color: #00b0ff;
-  transition: width 0.3s ease;
-}
-
-.classes__ink-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 11px;
-  font-weight: 500;
-  color: #ffffff;
-}
-
-.classes__marker-paper {
-  background-color: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 6px;
-  padding: 20px;
-  min-height: 140px;
-  max-height: 200px;
-  overflow-y: auto;
-  font-family: monospace;
-  font-size: 16px;
-  line-height: 1.8;
-  letter-spacing: 0.5px;
-  white-space: pre-wrap;
-  scrollbar-width: thin;
-  scrollbar-color: rgba(255, 255, 255, 0.1) transparent;
-}
-.classes__marker-paper::-webkit-scrollbar {
-  width: 6px;
-}
-.classes__marker-paper::-webkit-scrollbar-thumb {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 3px;
-}
-
-.classes__input-grid {
+.classes__grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
-
-.classes__employee-form {
+.classes__grid--clock {
+  grid-template-columns: repeat(2, 1fr);
+}
+.classes__employee-form, .classes__clock-form {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-
 .classes__table-container {
   overflow-x: auto;
 }
-
 .classes__table {
   width: 100%;
   border-collapse: collapse;
   text-align: left;
   font-size: 14px;
 }
-.classes__table th, .classes__table td {
+.classes__table th,
+.classes__table td {
   padding: 16px 24px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 .classes__table th {
   color: #8f92a1;
@@ -323,19 +241,110 @@ input {
 }
 .classes__table td {
   color: #f5f6fa;
-}
-.classes__table tr:last-child td {
-  border-bottom: none;
+  vertical-align: middle;
 }
 .classes__table tr:hover td {
   background-color: rgba(255, 255, 255, 0.01);
 }
-
 .classes__table-empty {
-  padding: 30px;
+  padding: 40px;
   text-align: center;
   color: #8f92a1;
   font-size: 14px;
+}
+.classes__badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+}
+.classes__badge--admin {
+  color: #ff1744;
+  padding: 0;
+}
+.classes__badge--user {
+  color: #00b0ff;
+  padding: 0;
+}
+.classes__badge--online {
+  background-color: rgba(0, 230, 118, 0.15);
+  color: #00e676;
+  border: 1px solid rgba(0, 230, 118, 0.2);
+}
+.classes__badge--offline {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #8f92a1;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.classes__table-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.classes__clock-wall {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+  width: 100%;
+  margin-top: 10px;
+}
+.classes__card--clock {
+  padding: 24px;
+  gap: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: radial-gradient(circle at top right, rgba(0, 176, 255, 0.05), transparent 60%), #151821;
+}
+.classes__clock-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-bottom: 10px;
+}
+.classes__clock-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+}
+.classes__clock-offset {
+  font-size: 11px;
+  color: #8f92a1;
+  background-color: rgba(255, 255, 255, 0.04);
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+.classes__clock-display {
+  text-align: center;
+  padding: 15px 0;
+}
+.classes__clock-time {
+  font-size: 32px;
+  font-weight: 300;
+  color: #00b0ff;
+  letter-spacing: 1px;
+  font-family: monospace;
+  text-shadow: 0 0 10px rgba(0, 176, 255, 0.2);
+}
+.classes__clock-output {
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 11px;
+  color: #8f92a1;
+  height: 54px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1.35;
+  word-break: break-word;
+}
+.classes__clock-hidden {
+  visibility: hidden;
 }
 
 @media (max-width: 768px) {
@@ -345,12 +354,9 @@ input {
   .classes__card {
     padding: 30px;
   }
-  .classes__input-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 576px) {
-  .classes__input-grid {
+  .classes__grid {
     grid-template-columns: 1fr;
   }
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*# sourceMappingURL=main.css.map */
