@@ -1,0 +1,395 @@
+@use 'vars' as v;
+@use 'fonts';
+@use 'keyframes';
+@use 'reset';
+
+.body__layout {
+    background-color: v.$bg-color;
+    color: v.$text-color;
+    font-family: fonts.$font-family;
+    font-weight: 400;
+    line-height: 1.6;
+    padding: 0 0 60px 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 20px;
+    animation: fadeIn 0.5s ease;
+}
+
+.header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+.btn__back {
+    color: v.$text-secondary;
+    font-size: 14px;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    transition: color v.$transition-speed;
+
+    &:hover {
+        color: v.$text-color;
+    }
+}
+
+.title_1 {
+    font-size: 32px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    color: v.$text-color;
+    padding-bottom: 15px;
+}
+
+.classes {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    &__title {
+        font-size: 16px;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        color: v.$accent-color;
+        border-left: 2px solid v.$accent-color;
+        padding-left: 10px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    &__row {
+        display: flex;
+        gap: 30px;
+
+        &--column {
+            flex-direction: column;
+        }
+    }
+
+    &__card {
+        background-color: #151821;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        flex: 1;
+        padding: 40px;
+        margin-bottom: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        &--table {
+            padding: 0;
+            overflow: hidden;
+        }
+    }
+
+    &__card-title {
+        font-size: 18px;
+        font-weight: 500;
+        color: v.$text-color;
+    }
+
+    &__panel-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 24px 30px;
+        background-color: rgba(255, 255, 255, 0.01);
+    }
+
+    &__input-group {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    &__label {
+        font-size: 12px;
+        color: v.$text-secondary;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+
+    &__input,
+    &__select {
+        background-color: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 4px;
+        padding: 12px 16px;
+        color: v.$text-color;
+        font-size: 14px;
+        outline: none;
+        width: 100%;
+        transition: border-color v.$transition-speed, background-color v.$transition-speed;
+
+        &:focus {
+            border-color: v.$accent-color;
+            background-color: rgba(255, 255, 255, 0.07);
+        }
+    }
+
+    &__select option {
+        background-color: v.$card-bg;
+        color: v.$text-color;
+    }
+
+    &__btn {
+        background-color: v.$accent-color;
+        color: #ffffff;
+        border: none;
+        border-radius: 4px;
+        padding: 12px 24px;
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        cursor: pointer;
+        height: 47px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color v.$transition-speed, transform 0.1s ease;
+
+        &:hover {
+            background-color: v.$accent-hover;
+        }
+
+        &:active {
+            transform: scale(0.97);
+        }
+
+        &--secondary {
+            background-color: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: v.$text-color;
+
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.1);
+            }
+        }
+
+        &--danger {
+            background-color: #ff1744;
+            color: #ffffff;
+
+            &:hover {
+                background-color: #d50000;
+            }
+        }
+
+        &--small {
+            height: 34px;
+            padding: 6px 10px;
+            font-size: 11px;
+            letter-spacing: 0.4px;
+        }
+
+        &--full {
+            width: 100%;
+        }
+    }
+
+    &__btn-row {
+        display: flex;
+        gap: 12px;
+        margin-top: 10px;
+        flex-wrap: wrap;
+
+        .classes__btn {
+            flex: 1;
+            min-width: 90px;
+            white-space: nowrap;
+        }
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+
+        &--clock {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &__employee-form,
+    &__clock-form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__table-container {
+        overflow-x: auto;
+    }
+
+    &__table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: left;
+        font-size: 14px;
+
+        th,
+        td {
+            padding: 16px 24px;
+        }
+
+        th {
+            color: v.$text-secondary;
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 0.8px;
+            background-color: rgba(255, 255, 255, 0.02);
+        }
+
+        td {
+            color: v.$text-color;
+            vertical-align: middle;
+        }
+
+        tr:hover td {
+            background-color: rgba(255, 255, 255, 0.01);
+        }
+    }
+
+    &__table-empty {
+        padding: 40px;
+        text-align: center;
+        color: v.$text-secondary;
+        font-size: 14px;
+    }
+
+    &__badge {
+        display: inline-block;
+        padding: 3px 8px;
+        border-radius: 4px;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        font-weight: 700;
+
+        &--admin {
+            color: #ff1744;
+            padding: 0;
+        }
+
+        &--user {
+            color: #00b0ff;
+            padding: 0;
+        }
+
+        &--online {
+            background-color: rgba(0, 230, 118, 0.15);
+            color: #00e676;
+            border: 1px solid rgba(0, 230, 118, 0.2);
+        }
+
+        &--offline {
+            background-color: rgba(255, 255, 255, 0.05);
+            color: v.$text-secondary;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+    }
+
+    &__table-actions {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    &__clock-wall {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        gap: 24px;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    &__card--clock {
+        padding: 24px;
+        gap: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        background: radial-gradient(circle at top right, rgba(0, 176, 255, 0.05), transparent 60%), #151821;
+    }
+
+    &__clock-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        padding-bottom: 10px;
+    }
+
+    &__clock-title {
+        font-size: 18px;
+        font-weight: 700;
+        color: #ffffff;
+    }
+
+    &__clock-offset {
+        font-size: 11px;
+        color: v.$text-secondary;
+        background-color: rgba(255, 255, 255, 0.04);
+        padding: 2px 6px;
+        border-radius: 3px;
+    }
+
+    &__clock-display {
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    &__clock-time {
+        font-size: 32px;
+        font-weight: 300;
+        color: v.$accent-color;
+        letter-spacing: 1px;
+        font-family: monospace;
+        text-shadow: 0 0 10px rgba(0, 176, 255, 0.2);
+    }
+
+    &__clock-output {
+        background-color: rgba(0, 0, 0, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.03);
+        border-radius: 4px;
+        padding: 6px 12px;
+        font-size: 11px;
+        color: v.$text-secondary;
+        height: 54px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        line-height: 1.35;
+        word-break: break-word;
+    }
+
+    &__clock-hidden {
+        visibility: hidden;
+    }
+}
+
+@media (max-width: 768px) {
+    .classes {
+        &__row {
+            flex-direction: column;
+        }
+
+        &__card {
+            padding: 30px;
+        }
+
+        &__grid {
+            grid-template-columns: 1fr;
+        }
+    }
+}

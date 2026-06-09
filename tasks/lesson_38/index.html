@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>38. Gulp and webpack</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body class="body__layout">
+    <div class="container">
+        <div class="header-bar">
+            <a href="../../index.html" class="btn__back">Back to home</a>
+        </div>
+        <h1 class="title_1">38. Gulp and Webpack</h1>
+        <div class="classes">
+            <h2 class="classes__title">Task 1: User and admin management</h2>
+            <div class="classes__row classes__row--column">
+                <div class="classes__card">
+                    <h3 class="classes__card-title">Create user</h3>
+                    <form id="user-form" class="classes__employee-form">
+                        <div class="classes__input-group">
+                            <label for="user-name" class="classes__label">Username</label>
+                            <input type="text" id="user-name" class="classes__input" placeholder="e.g. Petro" required>
+                        </div>
+                        <div class="classes__input-group">
+                            <label for="user-role" class="classes__label">Role</label>
+                            <select id="user-role" class="classes__select">
+                                <option value="user" selected>User</option>
+                                <option value="admin">Admin</option>
+                            </select>
+                        </div>
+                        <div class="classes__input-group">
+                            <label for="user-password" class="classes__label">Password</label>
+                            <input type="password" id="user-password" class="classes__input"
+                                placeholder="Enter password" required>
+                        </div>
+                        <button type="submit" class="classes__btn classes__btn--full">Add user</button>
+                    </form>
+                </div>
+                <div class="classes__card classes__card--table">
+                    <div class="classes__panel-header">
+                        <h3 class="classes__card-title">User directory</h3>
+                        <button id="btn-remove-all" class="classes__btn classes__btn--secondary classes__btn--small">
+                            Remove all users
+                        </button>
+                    </div>
+                    <div id="users-table-container" class="classes__table-container"></div>
+                </div>
+            </div>
+            <h2 class="classes__title">Task 2: World clock dashboard</h2>
+            <div class="classes__row classes__row--column">
+                <div class="classes__card">
+                    <h3 class="classes__card-title">Create world clock</h3>
+                    <form id="clock-form" class="classes__clock-form">
+                        <div class="classes__grid classes__grid--clock">
+                            <div class="classes__input-group">
+                                <label for="clock-city" class="classes__label">City / region name</label>
+                                <input type="text" id="clock-city" class="classes__input" placeholder="e.g. London"
+                                    required>
+                            </div>
+                            <div class="classes__input-group">
+                                <label for="clock-timezone" class="classes__label">Timezone preset</label>
+                                <select id="clock-timezone" class="classes__select">
+                                    <option value="-11">Midway (UTC-11)</option>
+                                    <option value="-10">Honolulu (UTC-10)</option>
+                                    <option value="-8">Anchorage (UTC-8)</option>
+                                    <option value="-7">Los Angeles (UTC-7)</option>
+                                    <option value="-6">Denver (UTC-6)</option>
+                                    <option value="-5">Chicago (UTC-5)</option>
+                                    <option value="-4" selected>New York (UTC-4)</option>
+                                    <option value="-3">Buenos Aires (UTC-3)</option>
+                                    <option value="0">London (UTC+0)</option>
+                                    <option value="1">Paris (UTC+1)</option>
+                                    <option value="2">Cairo (UTC+2)</option>
+                                    <option value="3">Kyiv (UTC+3)</option>
+                                    <option value="4">Dubai (UTC+4)</option>
+                                    <option value="5.5">Mumbai (UTC+5.5)</option>
+                                    <option value="8">Singapore (UTC+8)</option>
+                                    <option value="9">Tokyo (UTC+9)</option>
+                                    <option value="10">Sydney (UTC+10)</option>
+                                    <option value="12">Auckland (UTC+12)</option>
+                                    <option value="custom">Custom Offset...</option>
+                                </select>
+                            </div>
+                            <div class="classes__input-group" id="custom-offset-group" style="display: none;">
+                                <label for="clock-offset" class="classes__label">Custom UTC offset (hours)</label>
+                                <input type="number" id="clock-offset" class="classes__input" value="0" min="-12"
+                                    max="14" step="0.5">
+                            </div>
+                        </div>
+                        <button type="submit" class="classes__btn classes__btn--full">Create clock</button>
+                    </form>
+                </div>
+                <div class="classes__clock-wall" id="clock-wall"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./js/main.js?v=1.0.3"></script>
+</body>
+
+</html>

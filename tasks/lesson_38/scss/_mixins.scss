@@ -1,0 +1,5 @@
+@mixin response($breakpoint) {
+    @media (max-width: $breakpoint) {
+        @content;
+    }
+}

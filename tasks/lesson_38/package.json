@@ -1,0 +1,18 @@
+{
+  "name": "lesson_38",
+  "version": "1.0.0",
+  "description": "Gulp and webpack",
+  "main": "gulpfile.js",
+  "scripts": {
+    "build": "gulp"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "cssnano": "^8.0.1",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.1.0",
+    "postcss": "^8.4.24",
+    "sass": "^1.62.1"
+  }
+}
