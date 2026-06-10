@@ -63,7 +63,6 @@ function App() {
                     <ErrorMessage name="name" component="span" className="contact-form__error" />
                   </div>
                 </div>
-
                 <div className="contact-form__group">
                   <label htmlFor="email" className="contact-form__label">Email</label>
                   <Field
@@ -77,7 +76,6 @@ function App() {
                     <ErrorMessage name="email" component="span" className="contact-form__error" />
                   </div>
                 </div>
-
                 <div className="contact-form__group contact-form__group--full">
                   <label htmlFor="phone" className="contact-form__label">Телефон (у форматі +380)</label>
                   <Field
@@ -91,7 +89,6 @@ function App() {
                     <ErrorMessage name="phone" component="span" className="contact-form__error" />
                   </div>
                 </div>
-
                 <div className="contact-form__group contact-form__group--full">
                   <label htmlFor="message" className="contact-form__label">Повідомлення</label>
                   <Field
@@ -106,7 +103,6 @@ function App() {
                     <ErrorMessage name="message" component="span" className="contact-form__error" />
                   </div>
                 </div>
-
                 <div className="contact-form__group contact-form__group--full contact-form__group--checkbox">
                   <label className="contact-form__checkbox-label">
                     <Field type="checkbox" name="subscribe" className="contact-form__checkbox" />
@@ -115,7 +111,6 @@ function App() {
                   </label>
                 </div>
               </div>
-
               <div className="contact-form__actions">
                 <button type="submit" className="contact-form__submit-btn">
                   Надіслати
@@ -131,7 +126,7 @@ function App() {
             <div className="contact-success__card">
               <div className="contact-success__icon-box">
                 <svg className="contact-success__icon" viewBox="0 0 24 24" width="48" height="48">
-                  <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                  <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
                 </svg>
               </div>
               <h3 className="contact-success__title">Заявка надіслана!</h3>
